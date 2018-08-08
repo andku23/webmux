@@ -15,20 +15,24 @@ class BackgroundSlides extends Component {
         const settings = {
             dots: true,
             infinite: true,
-            speed: 500,
+            speed: 1000,
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            autoplay: true,
+            fade:true
+
         };
 
         return (
-            <Slider {...settings}>
-                <div>
-                    <Image src = {pic1}/>
-                </div>
-                <div>
-                    <Image src = {pic2}/>
-                </div>
-            </Slider>
+                <Slider {...settings} className = "App-slider">
+                    <div>
+                        <Image src = {pic1} fluid className = "App-slider-images"/>
+                    </div>
+                    <div>
+                        <Image src = {pic2} fluid className = "App-slider-images"/>
+                    </div>
+                </Slider>
+
         );
     }
 }
